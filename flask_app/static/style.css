@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;  
+}
+
+.home {
+    margin-left: 200px;
+}
+
+h1, a {
+    display: inline;
+}
+
+
+.show {
+    margin-left: 25px;
+}
+
+section {
+    
+}
+
+.full_name {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.created_on {
+    margin-bottom: 25px;
+}
+
+.last_updated {
+    margin-bottom: 25px;
+}
+

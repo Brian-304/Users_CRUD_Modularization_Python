@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>User</title>
+</head>
+
+<body>
+    <div class="container">
+    <h1>All Users</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">First_name</th>
+                <th scope="col">Last_name</th>
+                <th scope="col">email</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for people in names %}
+                <tr>
+                    <td>
+                    {{people.id}}
+                    </td>
+                    <td>
+                    {{people.First_name}}
+                    </td>
+                    <td>
+                    {{people.Last_name}}
+                    </td>
+                    <td>
+                    {{people.email}}
+                    </td>
+                    <td>
+                    <a href="/show/{{people.id}}">Show</a>
+                    <a href="/edit">Edit</a>
+                    <a href="/delete/{{people.id}}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-primary" href="/add_new">Add a new user</a>
+    </div> 
+</body>
+
+</html>
